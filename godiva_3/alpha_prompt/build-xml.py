@@ -7,7 +7,7 @@ import openmc
 # OpenMC simulation parameters
 batches = 350
 inactive = 50
-particles = int(1e4)
+particles = int(1e6)
 
 
 # ===============================================================================
@@ -70,6 +70,8 @@ settings_file.batches = batches
 settings_file.inactive = inactive
 settings_file.particles = particles
 settings_file.output = {"tallies": False}
+settings_file.alpha_mode = True
+settings_file.prompt_only = True
 
 # Create an initial uniform spatial source distribution over fissionable zones
 bounds = [-9.0, -9.0, -9.0, 9.0, 9.0, 9.0]
